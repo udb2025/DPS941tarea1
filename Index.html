@@ -139,7 +139,10 @@
                         <div>
                             <h3>${producto.nombre}</h3>
                             <p>Precio: $${producto.precio}</p>
-                            <p>Stock: ${producto.stock}</p>                
+                            <p>Stock: ${producto.stock}</p>
+                            <button id="btn-agregar-${producto.id}" class="btn waves-effect waves-light">Agregar
+                                <i class="material-icons right">add_shopping_cart</i>
+                            </button>              
                         </div>
                     `;
                     productList.appendChild(div);
