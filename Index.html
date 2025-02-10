@@ -188,7 +188,7 @@
                 this.actualizarCarrito();
             }
      /**
-     * Actualiza la pagina para ver el carrito.
+     * Actualiza la pagina para ver el carrito y Total.
      * Muestra los productos en el carrito
      */
             actualizarCarrito() 
@@ -205,12 +205,21 @@
                     `;
                     cartContainer.appendChild(div);
                 });
-                
+                document.getElementById("total").innerText = this.calcularTotal().toFixed(2);
+            }
+     /**
+     * sumamos el precio de todos los productos en carrito para sacar total.
+     * reduce() recorre un array y acumula un resultado en un solo valor
+     * @returns {number} =Total.
+     */
+            calcularTotal() 
+            {
+                return this.items.reduce((total, item) => total + (item.cantidad * item.producto.precio), 0);
             }
         
         }
 
-        
+
         let carrito = new Carrito();
   </script>
   </body>
