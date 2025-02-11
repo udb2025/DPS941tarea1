@@ -226,6 +226,7 @@
                     <td>${item.producto.nombre}</td>
                     <td>${item.cantidad}</td>
                     <td>${(item.cantidad * item.producto.precio).toLocaleString("en-US", { style: "currency", currency: "USD" })}</td>
+                    <td> <button class="btn waves-effect waves-light red" onclick="carrito.limpiarCarrito()">Eliminar<i class='material-icons right'>clear</i></button> </td>
                 `;
                 cartContainer.appendChild(row); 
             });
